@@ -25,6 +25,7 @@ nav .nav-links li {
 nav .nav-links a {
   text-decoration: none;
   letter-spacing: 1px;
+  text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
 }
@@ -49,7 +50,7 @@ nav .nav-links a.login-nav {
   margin: 5px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 789px) {
   body {
     overflow-x: hidden;
   }
@@ -103,4 +104,104 @@ nav .nav-links a.login-nav {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#top {
+  padding-top: 60px;
+}
+
+#top .col-text {
+  padding: 3% 7%;
+}
+
+#top .col-text .row {
+  margin-left: 0.1%;
+}
+
+#top .col-text .row .new-btn {
+  background-color: #242942;
+  color: white;
+  font-weight: 700;
+  border-radius: 25px;
+  margin-right: 3%;
+}
+
+#top .col-text .row h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
+  color: #a0a1ac;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin-top: 2%;
+}
+
+#top .col-text h1 {
+  padding: 3% 0;
+  text-transform: uppercase;
+  color: #242942;
+  font-size: 70px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+}
+
+#top .col-text h4 {
+  font-family: "Barlow", sans-serif;
+  color: #5b5f71;
+  padding: 1% 35% 3% 0;
+}
+
+#top .col-text .cta-row {
+  margin-left: 0.1%;
+  padding-top: 5%;
+}
+
+#top .col-text .cta-row .btn-demo {
+  background-color: #ff5c5c;
+  color: white;
+  text-transform: uppercase;
+  padding: auto 5%;
+}
+
+#top .col-text .cta-row h5 {
+  text-transform: uppercase;
+  margin: auto 0 auto 5%;
+  color: #a0a1ac;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
+}
+
+#top .col-im {
+  z-index: -1;
+}
+
+#top .col-im img {
+  width: 130%;
+}
+
+@media screen and (max-width: 789px) {
+  .col-row {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .col-text {
+    margin-top: 20%;
+  }
+  .col-text .cta-row h5 {
+    margin-left: 5px;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #top {
+    padding-bottom: 10%;
+  }
+  #top .col-text {
+    padding-top: 5%;
+  }
+  #top .col-text .cta-row h5 {
+    padding-top: 5%;
+    margin-left: 0;
+  }
 }
