@@ -1,0 +1,111 @@
+$red:hsl(0, 100%, 68%);
+$very-darkblue:hsl(230, 29%, 20%);
+$dark-grayishblue:hsl(230, 11%, 40%);
+$grayish-blue:hsl(231, 7%, 65%);
+$light-grayishblue:hsl(207, 33%, 95%);
+$font-family-heading:'Barlow Condensed',
+sans-serif;
+$font-family:'Barlow',
+sans-serif;
+$font-weight-normal:400;
+$font-weight-bold:700;
+//Navbar section
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    font-family: $font-family-heading;
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+            &.nav-links-color {
+                color: $very-darkblue;
+            }
+            &.login-nav {
+                color: $grayish-blue;
+            }
+        }
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    div {
+        width: 25px;
+        height: 3px;
+        background-color: $very-darkblue;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        overflow: hidden;
+        position: absolute;
+        right: 0px;
+        height: 50%;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        li {
+            opacity: 1;
+        }
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    height: 50%;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    right: 25%;
+    overflow-x: hidden;
+    background-color: $light-grayishblue;
+    transform: translateX(0%);
+    a {
+        display: block;
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+.toggle {
+    .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .line2 {
+        opacity: 0;
+    }
+    .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
